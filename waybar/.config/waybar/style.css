@@ -1,0 +1,140 @@
+/* Universal Bar Settings */
+* {
+    font-family: "Hack Nerd Font";
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 7px;
+}
+
+/* Bar Styling */
+window#waybar {
+    background: rgba(255, 255, 255, .2);
+    color: #ffffff;
+    border-radius: 8px;
+}
+#waybar > box {
+  margin: 1px 8px 1px 8px;
+  padding: 2px;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+/* Button Styling */
+button {
+    box-shadow: inset 0 3px transparent;
+    border: none;
+    border-radius: 0;
+}
+button:hover {
+    background: inherit;
+}
+
+/* Workspaces */
+#workspaces {
+    color: #f5e0dc;
+    padding: 1px 1px 1px 1px;
+    
+}
+#workspaces button {
+    padding: 0 5px;
+    color: #ffffff;
+    background-color: transparent;
+}
+#workspaces button:hover {
+    background:rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+}
+#workspaces button.focused {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0px #ffffff;
+}
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+#workspaces button.visible {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+}
+
+/* Network */
+#network {
+    padding: 0px 8px;
+}
+#network:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#network.wifi {
+    color: #85eb81; /*GREEN*/
+}
+#network.disconnected {
+    color: #edea8c; /*YELLOW*/
+}
+
+/* Battery */
+#battery {
+    padding: 0px 8px;
+}
+#battery.charging, #battery.plugged {
+    color: #85eb81; /*GREEN*/
+}
+#battery:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#battery.warning:not(.charging) {
+    color: #edea8c; /*YELLOW*/
+}
+#battery.critical:not(.charging) {
+    color: #f57067; /*RED*/
+}
+
+/* Clock */
+#clock {
+    padding: 0px 8px;
+}
+
+/* Volume */
+#pulseaudio {
+    padding: 0px 8px;
+}
+
+/* Bluetooth */
+#bluetooth {
+    padding: 0px 8px;
+}
+#bluetooth:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#bluetooth.on {
+    color: #7ec0ed; /*BLUE*/
+}
+#bluetooth.off {
+    color: #f57067; /*RED*/
+}
+#bluetooth.connected {
+    color: #85eb81; /*GREEN*/
+}
+#bluetooth.disconnected {
+    color: #f57067; /*RED*/ 
+}
+
+/* Brightness */
+#backlight {
+    padding: 0px 8px;
+}
+
+/* Power */
+#custom-power {
+    padding: 0px 8px;
+}
+#custom-power:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(128, 128, 128, 1);
+    border-radius: 7px;
+    text-shadow: none;
+    box-shadow: none;
+    border: none;
+}

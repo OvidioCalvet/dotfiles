@@ -1,0 +1,149 @@
+    {
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "margin-top": 5,
+    "margin-right": 5,
+    "margin-bottom": 5,
+    "margin-left": 5,
+    "reload_style_on_change": true,
+    "style": "~/.config/waybar/style.css",
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "network",
+        // "memory", **ADD LATER**
+        "battery"
+        // "cpu"     **ADD LATER**
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "bluetooth",
+        "backlight",
+        // "idle/inhibitor",  **ADD LATER** 
+        "custom/power"
+    ],
+
+    // ***LEFT MODULE*** //
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 3
+        },
+
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+
+    // -- wifi -- //
+    "network": {
+        "format-wifi": "Connected   • ",
+        "format-ethernet": "Connected 󰈀 ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "No Internet  ",
+
+        "on-click": "kitty nmtui",
+        "tooltip-format": "Network: <b>{essid}</b>\nIP: <b>{ipaddr}/{cidr}</b>",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+
+    // -- ram -- //
+    // "memory": {
+    //     "interval": 30,
+    //     "format": "{}% ",
+    //     "tooltip": false
+    // },
+
+    // -- battery -- //
+    "battery": {
+        "interval": 20,
+        "states": {
+            "good": 85,
+            "warning": 30,
+            "critical": 15
+        },
+
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": [
+            "󰁺", // 0-19%
+            "󰁼", // 20-39%
+            "󰁾", // 40-59%
+            "󰂀", // 60-79%
+            "󰂂", // 80-95%
+            "󰁹"  // 96-100%
+        ],
+
+        "tooltip": true,
+        "tooltip-format": "[{time} until DEAD]",
+        "tooltip-format-charging": "[{time} until FULL]"
+    },
+
+    // -- cpu -- //
+    // "cpu": {
+    //     "format": "",
+    //     "tooltip": true,
+    //     "tooltip-format": "Load: {load}\nCPU Usage: {usage}\nCORE Usage: {usageN}"
+    // },
+
+    // ***CENTER MODULE*** //
+    "clock": {
+        "tooltip": true,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    // ***RIGHT MODULE*** //
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " ",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", " "]
+        }
+    },
+
+    // -- bluetooth -- //
+    "bluetooth": {
+        "format": "",
+        "format-on": "",
+        "format-off": "",
+        "format-connected": "{device_alias} • ",
+        "format-disconnected": "disconnected • ",
+        "on-click": "~/.config/waybar/scripts/bluetooth.sh",
+        "tooltip": false
+    },
+
+    // -- brightness -- //
+    "backlight": {
+        "device": "acpi_video0",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false
+    },
+
+    // // -- idle -- //       **add later** 
+    // "idle_inhibitor": {
+    //     "format": "{icon}",
+    //     "format-icons": {
+    //         "activated": "",
+    //         "deactivated": ""
+    //     }
+    // },
+
+    // -- power -- //
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout &",
+        "tooltip": false
+    }
+},
