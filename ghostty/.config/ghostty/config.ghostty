@@ -1,0 +1,13 @@
+theme = Vague
+
+background = #111111
+
+font-family = Hack Nerd Font Mono
+font-size = 15.0
+
+cursor-style = block
+cursor-style-blink = false
+
+mouse-hide-while-typing = true
+
+shell-integration-features = ssh-env,ssh-terminfo
