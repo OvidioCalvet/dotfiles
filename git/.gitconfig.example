@@ -1,0 +1,7 @@
+# Template for ~/.gitconfig — NOT symlinked (repo is public, don't commit your real identity).
+# Copy to ~/.gitconfig on a new machine and fill in your email.
+[init]
+	defaultBranch = main
+[user]
+	email = YOUR_EMAIL@example.com
+	name = Ovidio Calvet
