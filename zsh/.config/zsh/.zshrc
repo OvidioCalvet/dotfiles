@@ -3,6 +3,8 @@ eval "$(starship init zsh)"
 
 # vim mode on the command line
 bindkey -v
+bindkey -M viins '^?' backward-delete-char
+bindkey -M viins '^H'  backward-delete-char
 
 # jj -> normal mode from insert
 function vi-cmd-escape() {
