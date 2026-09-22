@@ -1,6 +1,9 @@
 # ~/.zshrc
 eval "$(starship init zsh)"
 
+# remove trailing space on right prompt
+ZLE_RPROMPT_INDENT=0
+
 # vim mode on the command line
 bindkey -v
 bindkey -M viins '^?' backward-delete-char
