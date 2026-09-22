@@ -40,6 +40,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.layer_rule({
     match = { namespace = "waybar" },
     blur = true,
+    blur_popups = true,
     ignore_alpha = 0,
 })
 
@@ -50,9 +51,9 @@ hl.config({
 
     general = {
         gaps_in = 3,
-        gaps_out = 8,
+        gaps_out = 7,
 
-        ["col.active_border"]   = "rgba(0,0,0,0)",
+        ["col.active_border"]   = "rgba(255,255,255,.5)",
         ["col.inactive_border"] = "rgba(0,0,0,0)",
 
         resize_on_border = true,

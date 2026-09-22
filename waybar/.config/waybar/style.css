@@ -3,20 +3,18 @@
     font-family: "Hack Nerd Font";
     font-weight: 400;
     font-size: 15px;
-    border-radius: 7px;
 }
 
 /* Bar Styling */
 window#waybar {
-    background: rgba(255, 255, 255, .2);
+    background: transparent; 
     color: #ffffff;
-    border-radius: 3px;
 }
 #waybar > box {
-  margin: 1px 6px 1px 6px;
+  margin: 0px 3px 0px 3px;
   padding: 2px;
-  background-color: transparent;
-  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 2px;
 }
 
 /* Button Styling */
@@ -41,8 +39,8 @@ button:hover {
     background-color: transparent;
 }
 #workspaces button:hover {
-    background:rgba(255, 255, 255, 0.1);
-    border-radius: 7px;
+    background:rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
 }
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.1);
@@ -52,8 +50,8 @@ button:hover {
     background-color: #eb4d4b;
 }
 #workspaces button.visible {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 7px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 3px;
 }
 
 /* Network */
@@ -61,7 +59,7 @@ button:hover {
     padding: 0px 8px;
 }
 #network:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 #network.wifi {
     color: #85eb81; /*GREEN*/
@@ -76,9 +74,6 @@ button:hover {
 }
 #battery.charging, #battery.plugged {
     color: #85eb81; /*GREEN*/
-}
-#battery:hover {
-    background-color: rgba(255, 255, 255, 0.1);
 }
 #battery.warning:not(.charging) {
     color: #edea8c; /*YELLOW*/
@@ -102,7 +97,7 @@ button:hover {
     padding: 0px 8px;
 }
 #bluetooth:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 #bluetooth.on {
     color: #7ec0ed; /*BLUE*/
@@ -127,13 +122,14 @@ button:hover {
     padding: 0px 8px;
 }
 #custom-power:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Tooltips */
 tooltip {
-    background: rgba(128, 128, 128, 1);
-    border-radius: 7px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
     text-shadow: none;
     box-shadow: none;
     border: none;
