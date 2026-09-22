@@ -4,7 +4,7 @@
         <h3>
             <b>dotfiles</b>
             <br>
-            managed with [GNU stow](https://www.gnu.org/software/stow/)
+            managed with <a href="https://www.gnu.org/software/stow/">GNU stow</a>
         </h3>
     </header>
     <br>
