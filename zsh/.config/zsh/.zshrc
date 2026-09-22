@@ -1,7 +1,8 @@
 # ~/.zshrc
+setopt AUTO_CD
 eval "$(starship init zsh)"
 
-# remove trailing space on right prompt
+# shell settings
 ZLE_RPROMPT_INDENT=0
 
 # vim mode on the command line
@@ -21,6 +22,7 @@ autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompd
 zstyle ':completion:*' menu select
 
 # colorful ls (eza)
-alias ls='eza --color=always --group-directories-first'
-alias ll='eza -l --color=always'
-alias la='eza -a --color=always'
+alias ls='eza --group-directories-first --icons=auto --color=auto'
+alias ll='eza -lh --group-directories-first --icons=auto --git'
+alias la='eza -lah --group-directories-first --icons=auto --git'
+alias lt='eza --tree --level=2 --icons=auto'
