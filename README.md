@@ -37,7 +37,7 @@ clone the repo to a `~/.dotfiles` directory
 git clone git@github.com:OvidioCalvet/dotfiles.git ~/.dotfiles
 ```
 
-after cloning, cd into your dotfiles directory and run stow targeting the specified configurations
+after cloning, cd into your dotfiles directory and run stow targeting the specified packages
 
 ```sh
 cd ~/.dotfiles && stow -t ~ ghostty starship tmux zsh hypr waybar
