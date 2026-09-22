@@ -1,9 +1,8 @@
 # ~/.zshrc
-setopt AUTO_CD
 eval "$(starship init zsh)"
 
 # shell settings
-ZLE_RPROMPT_INDENT=0
+setopt AUTO_CD
 
 # vim mode on the command line
 bindkey -v
