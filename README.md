@@ -3,6 +3,7 @@
     <header>
         <h3>
             <b>dotfiles</b>
+            <br>
             managed with [GNU stow](https://www.gnu.org/software/stow/)
         </h3>
     </header>
