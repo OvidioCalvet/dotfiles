@@ -24,4 +24,4 @@ zstyle ':completion:*' menu select
 alias ls='eza --group-directories-first --icons=auto --color=auto'
 alias ll='eza -lh --group-directories-first --icons=auto --git'
 alias la='eza -lah --group-directories-first --icons=auto --git'
-alias lt='eza --tree --level=2 --icons=auto'
+alias lt='eza --tree --icons=auto'
