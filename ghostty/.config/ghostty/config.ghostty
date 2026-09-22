@@ -1,6 +1,8 @@
 theme = Vague
 
 background = #111111
+background-opacity = 0.8
+background-opacity-cells = true
 
 font-family = Hack Nerd Font Mono
 font-size = 15.0
