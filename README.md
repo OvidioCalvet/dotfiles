@@ -3,12 +3,14 @@
     <header>
         <h3>
             <b>dotfiles</b>
-            <br>
-            managed with <a href="https://www.gnu.org/software/stow/">GNU stow</a>
         </h3>
     </header>
     <br>
     <br>
+</div>
+
+<div align="center">
+    managed with <a href="https://www.gnu.org/software/stow/">GNU stow</a>
 </div>
 
 ## Required
