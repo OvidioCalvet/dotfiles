@@ -1,8 +1,15 @@
 # ~/.zshrc
-eval "$(starship init zsh)"
-
-# shell settings
 setopt AUTO_CD
+
+# init starship only once per shell — re-running `eval "$(starship init zsh)"`
+# (e.g. by sourcing this file again) wraps zle-keymap-select a second time,
+# which calls `zle reset-prompt` twice on every vi mode switch and makes the
+# redraw eat previous lines (starship issues #7063 and #2915).
+# NOT exported, so new shells still run the init normally.
+if [[ -z ${_STARSHIP_INIT_DONE:-} ]]; then
+  eval "$(starship init zsh)"
+  _STARSHIP_INIT_DONE=1
+fi
 
 # vim mode on the command line
 bindkey -v
